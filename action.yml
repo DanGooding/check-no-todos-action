@@ -5,6 +5,7 @@ runs:
   using: "composite"
   steps:
     - name: Grep for TODOs
+      shell: bash
       run: |
         if git grep TODO ; then
           echo found unadressed todo items >&2
