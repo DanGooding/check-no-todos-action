@@ -7,7 +7,7 @@ runs:
     - name: Grep for TODOs
       shell: bash
       run: |
-        if git grep TODO ; then
+        if git grep TODO ':(exclude).github/workflows/' ; then
           echo found unadressed todo items >&2
           exit 1
         fi
