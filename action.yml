@@ -7,6 +7,8 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - name: Debug
+      run: "echo hello"
     - name: Grep for TODOs
       run: |
         echo running!
