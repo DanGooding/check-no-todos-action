@@ -1,0 +1,17 @@
+name: check-no-todos
+descriptiion: Check that there are no TODO comments left unadressed
+
+inputs:
+outputs:
+
+runs:
+  using: "composite"
+  steps:
+    - name: Grep for TODOs
+      run: |
+        pwd
+        ls
+        if git grep TODO ; then
+          echo found unadressed todo items >&2
+          exit 1
+        fi
