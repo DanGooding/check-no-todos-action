@@ -8,6 +8,7 @@ runs:
   using: "composite"
   steps:
     - name: Debug
+      shell: bash
       run: "echo hello"
     - name: Grep for TODOs
       run: |
