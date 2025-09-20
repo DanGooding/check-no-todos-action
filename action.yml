@@ -9,6 +9,7 @@ runs:
   steps:
     - name: Grep for TODOs
       run: |
+        echo running!
         pwd
         ls
         if git grep TODO ; then
